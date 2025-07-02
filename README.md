@@ -37,3 +37,9 @@ Report Generation: The analysis results are generated and output as a final repo
 - 输出代码时不要带上 ''' triple-quoted string '''去注释掉部分代码，这样我的工程很难跑通，查起来很累
 
 # 下面是你的规划，你可以反复读写此处，但请不要覆盖我的全局要求
+## 计划 Plan
+1. 解析 `DeepResearch.yml` 中描述的迭代搜索流程，提炼主要步骤：解析用户问题->生成搜索主题->调用 Tavily 搜索->判断是否继续->累计搜索结果->最终汇总。
+2. 使用 `openai` SDK 配合 `OPENROUTER_API_KEY` 与 `TAVILY_API_KEY` 在 `deepresearch` 包中实现该流程，提供 `DeepResearch.run(query, depth)` 接口。
+3. 创建命令行脚本与 `streamlit` 前端，允许用户在终端或网页中输入问题和深度并获得 Markdown 报告。
+4. 编写 `requirements.txt` 和 README 中的配置说明，包含环境变量与运行方式。
+5. 自检代码可运行后提交 PR。
