@@ -20,7 +20,11 @@ Report Generation: The analysis results are generated and output as a final repo
   api_key=""
   </env>
 - 你还会用上Tavily Search的调用,env环境请配置
-- 其他
+  <env>
+  base_url="https://api.tavily.com/search",
+  api_key=""
+  </env>
+- 其他需要配置的内容，请你websearch做进一步规划处理，你可以在dify社区和相关讨论里找到他们的一些资源，以及dsl的定义
 ## 项目要求：
 - 确保真实地调用LLM去解析用户的query，做好上下文的意图的处理，不用指定model，我的openrouter会自己处理
 - 确保项目本身足够完备而非一个玩具，是一个完整的工程
@@ -29,6 +33,7 @@ Report Generation: The analysis results are generated and output as a final repo
 - **在我确认计划后，将这个计划更新到当前md内，追加，但不要覆盖**
 - **你可以在执行的过程中随时查看这个md**
 - 在工程输出完成后，自己检查工程能否跑通，确保没有bug再交付给我，并且告诉我一些建议的提问内容
+- 在工程输出完成后，新建文件，或者更新下方的内容，生成一个readme，告诉其他看到这个项目的人类如何配置
 - 输出代码时不要带上 ''' triple-quoted string '''去注释掉部分代码，这样我的工程很难跑通，查起来很累
 
 # 下面是你的规划，你可以反复读写此处，但请不要覆盖我的全局要求
